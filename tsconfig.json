@@ -1,12 +1,34 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "CommonJS",
-    "declaration": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "types": ["node"]          // 关键：引入 Node.js 类型
+    /* 基础选项 */
+    "target": "ES2020",              /* 设定编译后的 JavaScript 版本 */
+    "module": "ESNext",              /* 使用现代的模块系统 */
+    "lib": ["ES2020"],               /* 包含的库文件 */
+    "allowJs": true,                 /* 允许编译 JavaScript 文件 */
+    "outDir": "./dist",              /* 指定输出目录 */
+    "rootDir": "./src",              /* 指定输入文件的根目录 */
+    "removeComments": true,          /* 移除注释 */
+    "importHelpers": true,           /* 从 tslib 导入辅助函数 */
+
+    /* 类型声明相关 */
+    "declaration": true,             /* 生成相应的 .d.ts 文件 */
+    "declarationMap": true,          /* 为每个 .d.ts 文件生成 sourcemap */
+    "emitDeclarationOnly": true,     /* 只生成声明文件，不生成 JS 文件 */
+
+    /* 严格性相关 */
+    "strict": true,                  /* 启用所有严格的类型检查选项 */
+    "noImplicitAny": true,           /* 对隐式的 any 类型抛出错误 */
+    "strictNullChecks": true,        /* 启用严格的 null 检查 */
+
+    /* 模块相关 */
+    "moduleResolution": "bundler",    
+    "esModuleInterop": true,         /* 提供对 CommonJS 模块的更好支持 */
+    "allowSyntheticDefaultImports": true, /* 允许从没有默认导出的模块中默认导入 */
+
+    /* 高级选项 */
+    "skipLibCheck": true,            /* 跳过声明文件的类型检查 */
+    "forceConsistentCasingInFileNames": true /* 强制文件名大小写一致 */
   },
   "include": ["src/**/*"],
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

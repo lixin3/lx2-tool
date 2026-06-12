@@ -1,1 +1,3 @@
-declare const dataUtils: any;
+export * from './data';
+export { default } from './data';
+//# sourceMappingURL=index.d.ts.map

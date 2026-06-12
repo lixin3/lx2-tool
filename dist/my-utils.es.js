@@ -1,0 +1,1 @@
+var t=t=>Object.prototype.toString.call(t),a={getDataType:t};export{a as default,t as getDataType};

@@ -1,27 +1,28 @@
 {
   "name": "lx2-tool",
-  "version": "1.0.5",
-  "description": "工具",
-  "license": "ISC",
-  "author": "lixin",
-  "type": "commonjs",
-  "main": "src/index.ts",
-  "module": "dist/index.mjs",
+  "version": "1.0.8",
+  "description": "My utility library",
+  "type": "module",
+  "main": "./dist/my-utils.umd.js",
+  "module": "./dist/my-utils.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
+      "import": "./dist/my-utils.es.js",
+      "require": "./dist/my-utils.umd.js",
       "types": "./dist/index.d.ts"
     }
   },
-   "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
+    "build": "vite build && tsc --emitDeclarationOnly",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3",
-    "typescript": "^6.0.3"
+    "typescript": "^5.0.0",
+    "vite": "^4.0.0",
+    "terser": "^5.0.0"
   }
 }
