@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["node"]          // 关键：引入 Node.js 类型
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
+}
