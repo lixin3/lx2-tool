@@ -1,6 +1,4 @@
-// index.js
-const dataUtils = require('./data');
-
-module.exports = {
-  ...dataUtils,
-};
+const getDataType=(data)=>{
+    return Object.prototype.toString.call(data)
+}
+module.exports = { getDataType }

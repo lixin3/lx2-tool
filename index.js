@@ -1,5 +1,6 @@
-function hello(name) {
-  return `Hello, ${name}! Welcome to my-npm-package.`
-}
+// index.js
+const dataUtils = require('./data');
 
-module.exports = { hello }
+module.exports = {
+  ...dataUtils,
+};
