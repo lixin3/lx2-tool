@@ -1,6 +1,6 @@
 {
   "name": "lx2-tool",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "工具",
   "license": "ISC",
   "author": "lixin",
@@ -14,6 +14,7 @@
       "types": "./dist/index.d.ts"
     }
   },
+   "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
